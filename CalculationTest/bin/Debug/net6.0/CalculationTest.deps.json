@@ -1090,8 +1090,14 @@
         }
       },
       "xunit.runner.visualstudio/2.4.5": {},
+      "CalculationUI/1.0.0": {
+        "runtime": {
+          "CalculationUI.dll": {}
+        }
+      },
       "Interfaces/1.0.0": {
         "dependencies": {
+          "CalculationUI": "1.0.0",
           "Model": "1.0.0"
         },
         "runtime": {
@@ -1105,6 +1111,7 @@
       },
       "Services/1.0.0": {
         "dependencies": {
+          "CalculationUI": "1.0.0",
           "Interfaces": "1.0.0",
           "Model": "1.0.0"
         },
@@ -1763,6 +1770,11 @@
       "sha512": "sha512-OwHamvBdUKgqsXfBzWiCW/O98BTx81UKzx2bieIOQI7CZFE5NEQZGi8PBQGIKawDW96xeRffiNf20SjfC0x9hw==",
       "path": "xunit.runner.visualstudio/2.4.5",
       "hashPath": "xunit.runner.visualstudio.2.4.5.nupkg.sha512"
+    },
+    "CalculationUI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Interfaces/1.0.0": {
       "type": "project",

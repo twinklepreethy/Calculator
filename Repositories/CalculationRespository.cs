@@ -1,4 +1,6 @@
 ﻿using Interfaces.Repositories;
+using Model.DTOs;
+using Model.Entities;
 
 namespace Repositories
 {
@@ -9,9 +11,16 @@ namespace Repositories
             return new[] { 1, 2 };
         }
 
-        public void Save()
+        public void Save(CalculationDto calculationDto)
         {
-            throw new NotImplementedException();
+            var result = new Calculation
+            {
+                Date = calculationDto.Date,
+                Function = calculationDto.Function,
+                ProbabilityA = calculationDto.ProbabilityA,
+                ProbabilityB = calculationDto.ProbabilityB,
+                Result = calculationDto.Result
+            };
         }
     }
 }

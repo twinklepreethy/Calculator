@@ -235,6 +235,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Calculator\\CalculationUI\\CalculationUI.csproj": {
+                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Calculator\\CalculationUI\\CalculationUI.csproj"
+              },
               "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Calculator\\Core\\Model.csproj": {
                 "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Calculator\\Core\\Model.csproj"
               }
@@ -299,6 +302,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Calculator\\CalculationUI\\CalculationUI.csproj": {
+                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Calculator\\CalculationUI\\CalculationUI.csproj"
+              },
               "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Calculator\\Core\\Model.csproj": {
                 "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Calculator\\Core\\Model.csproj"
               },

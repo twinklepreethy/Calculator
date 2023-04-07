@@ -8,6 +8,8 @@
     self.probabilityA = ko.observable();
     self.probabilityB = ko.observable();
     self.isClicked = ko.observable(false);
+    self.functions = ko.observableArray([]);
+    self.selectedFunctionId = ko.observable();
 
     self.onFunctionClick = function () {
         self.isClicked(true);

@@ -7,10 +7,18 @@ using System.Threading.Tasks;
 
 namespace Model.Entities
 {
-    public abstract class Function
+    public class Function
     {
-        public abstract string GetFormula();
-        public abstract decimal Calculate(decimal probabilityA, decimal probabilityB);
+        public virtual string GetFormula()
+        {
+            return string.Empty;
+        }
+
+        public virtual decimal Calculate(decimal probabilityA, decimal probabilityB)
+        {
+            return 0;
+        }
+
         public FunctionTypeEnum FunctionType { get; set; }
     }
 }

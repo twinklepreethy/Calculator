@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.DTOs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,6 @@ namespace Interfaces.Repositories
     public interface ICalculationRepository
     {
         IEnumerable<int> Get();
-        void Save();
+        void Save(CalculationDto calculationDto);
     }
 }

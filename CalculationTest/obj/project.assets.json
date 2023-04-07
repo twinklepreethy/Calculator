@@ -1809,10 +1809,24 @@
           "build/netcoreapp3.1/xunit.runner.visualstudio.props": {}
         }
       },
+      "CalculationUI/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CalculationUI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CalculationUI.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Interfaces/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "CalculationUI": "1.0.0",
           "Model": "1.0.0"
         },
         "compile": {
@@ -1836,6 +1850,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "CalculationUI": "1.0.0",
           "Interfaces": "1.0.0",
           "Model": "1.0.0"
         },
@@ -6140,6 +6155,11 @@
         "xunit.runner.visualstudio.2.4.5.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "CalculationUI/1.0.0": {
+      "type": "project",
+      "path": "../CalculationUI/CalculationUI.csproj",
+      "msbuildProject": "../CalculationUI/CalculationUI.csproj"
     },
     "Interfaces/1.0.0": {
       "type": "project",

@@ -8,10 +8,16 @@
     ".NETCoreApp,Version=v6.0": {
       "Interfaces/1.0.0": {
         "dependencies": {
+          "CalculationUI": "1.0.0",
           "Model": "1.0.0"
         },
         "runtime": {
           "Interfaces.dll": {}
+        }
+      },
+      "CalculationUI/1.0.0": {
+        "runtime": {
+          "CalculationUI.dll": {}
         }
       },
       "Model/1.0.0": {
@@ -23,6 +29,11 @@
   },
   "libraries": {
     "Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CalculationUI/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

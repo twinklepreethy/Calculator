@@ -8,8 +8,7 @@ namespace Model.Enums
 {
     public enum FunctionTypeEnum
     {
-        None,
-        CombinedWith,
-        Either
+        CombinedWith = 1,
+        Either = 2
     }
 }

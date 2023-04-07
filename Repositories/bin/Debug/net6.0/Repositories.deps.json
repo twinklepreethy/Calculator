@@ -14,8 +14,14 @@
           "Repositories.dll": {}
         }
       },
+      "CalculationUI/1.0.0": {
+        "runtime": {
+          "CalculationUI.dll": {}
+        }
+      },
       "Interfaces/1.0.0": {
         "dependencies": {
+          "CalculationUI": "1.0.0",
           "Model": "1.0.0"
         },
         "runtime": {
@@ -31,6 +37,11 @@
   },
   "libraries": {
     "Repositories/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CalculationUI/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

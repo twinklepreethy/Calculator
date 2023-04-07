@@ -1,5 +1,7 @@
-﻿using Interfaces.Repositories;
+﻿using CalculationUI.Models;
+using Interfaces.Repositories;
 using Interfaces.Services;
+using Model.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,9 +19,17 @@ namespace Services
             _calculatorRepository = calculationRepository;
         }
 
-        public void SaveFunction()
+        public void SaveFunction(CalculationViewModel calculationVM)
         {
-            throw new NotImplementedException();
+            var calculationDto = new CalculationDto
+            {
+                Date = DateTime.Now,
+                Function = calculationVM.SelectedFunctionId.ToString(), //TODO this needs to be text, get it from id
+                ProbabilityA = calculationVM.ProbabilityA,
+                ProbabilityB = calculationVM.ProbabilityB,
+                Result = calculationVM.Value
+            };
+            _calculatorRepository.Save(calculationDto);
         }
     }
 }

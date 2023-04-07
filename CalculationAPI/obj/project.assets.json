@@ -106,6 +106,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "CalculationUI": "1.0.0",
           "Model": "1.0.0"
         },
         "compile": {
@@ -129,6 +130,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "CalculationUI": "1.0.0",
           "Interfaces": "1.0.0",
           "Model": "1.0.0"
         },

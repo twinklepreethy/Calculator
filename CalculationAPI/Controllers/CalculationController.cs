@@ -10,6 +10,7 @@ namespace CalculationAPI.Controllers
     {
         private readonly ILogger<CalculationController> _logger;
         private readonly IGetFunctionsService _getFunctionsService;
+        //private readonly ICre
 
         public CalculationController(ILogger<CalculationController> logger, IGetFunctionsService getFunctionsService)
         {
@@ -29,6 +30,12 @@ namespace CalculationAPI.Controllers
 
                 throw;
             }
+        }
+
+        [HttpPost]
+        public void SaveFunction(int functionId)
+        {
+
         }
     }
 }

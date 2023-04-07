@@ -2,10 +2,24 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "CalculationUI/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/CalculationUI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CalculationUI.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Interfaces/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "CalculationUI": "1.0.0",
           "Model": "1.0.0"
         },
         "compile": {
@@ -28,6 +42,11 @@
     }
   },
   "libraries": {
+    "CalculationUI/1.0.0": {
+      "type": "project",
+      "path": "../CalculationUI/CalculationUI.csproj",
+      "msbuildProject": "../CalculationUI/CalculationUI.csproj"
+    },
     "Interfaces/1.0.0": {
       "type": "project",
       "path": "../Interfaces/Interfaces.csproj",
@@ -41,6 +60,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "CalculationUI >= 1.0.0",
       "Interfaces >= 1.0.0",
       "Model >= 1.0.0"
     ]
@@ -78,6 +98,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Calculator\\CalculationUI\\CalculationUI.csproj": {
+              "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Calculator\\CalculationUI\\CalculationUI.csproj"
+            },
             "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Calculator\\Core\\Model.csproj": {
               "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Calculator\\Core\\Model.csproj"
             },
