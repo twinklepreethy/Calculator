@@ -18,7 +18,5 @@ namespace Model.Core
         {
             return 0;
         }
-
-        public virtual FunctionTypeEnum FunctionType { get; protected set; }
     }
 }

@@ -11,11 +11,6 @@ namespace Model.Core
     [FunctionType(FunctionTypeEnum.Either)]
     public class EitherFunction : Function
     {
-        public EitherFunction()
-        {
-            FunctionType = FunctionTypeEnum.Either;
-        }
-
         public override decimal Calculate(decimal probabilityA, decimal probabilityB)
         {
             return probabilityA + probabilityB - probabilityA * probabilityB;
