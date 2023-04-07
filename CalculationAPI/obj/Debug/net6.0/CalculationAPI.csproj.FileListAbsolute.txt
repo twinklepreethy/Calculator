@@ -1,0 +1,7 @@
+C:\Users\rakes\source\repos\Calculation\CalculationAPI\obj\Debug\net6.0\CalculationAPI.csproj.AssemblyReference.cache
+C:\Users\rakes\source\repos\Calculation\CalculationAPI\obj\Debug\net6.0\CalculationAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rakes\source\repos\Calculation\CalculationAPI\obj\Debug\net6.0\CalculationAPI.AssemblyInfoInputs.cache
+C:\Users\rakes\source\repos\Calculation\CalculationAPI\obj\Debug\net6.0\CalculationAPI.AssemblyInfo.cs
+C:\Users\rakes\source\repos\Calculation\CalculationAPI\obj\Debug\net6.0\CalculationAPI.csproj.CoreCompileInputs.cache
+C:\Users\rakes\source\repos\Calculation\CalculationAPI\obj\Debug\net6.0\CalculationAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\rakes\source\repos\Calculation\CalculationAPI\obj\Debug\net6.0\CalculationAPI.MvcApplicationPartsAssemblyInfo.cache

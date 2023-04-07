@@ -1,0 +1,15 @@
+C:\Users\rakes\source\repos\Calculation\Interfaces\bin\Debug\net6.0\Interfaces.deps.json
+C:\Users\rakes\source\repos\Calculation\Interfaces\bin\Debug\net6.0\Interfaces.dll
+C:\Users\rakes\source\repos\Calculation\Interfaces\bin\Debug\net6.0\Interfaces.pdb
+C:\Users\rakes\source\repos\Calculation\Interfaces\bin\Debug\net6.0\Model.dll
+C:\Users\rakes\source\repos\Calculation\Interfaces\bin\Debug\net6.0\Model.pdb
+C:\Users\rakes\source\repos\Calculation\Interfaces\obj\Debug\net6.0\Interfaces.csproj.AssemblyReference.cache
+C:\Users\rakes\source\repos\Calculation\Interfaces\obj\Debug\net6.0\Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rakes\source\repos\Calculation\Interfaces\obj\Debug\net6.0\Interfaces.AssemblyInfoInputs.cache
+C:\Users\rakes\source\repos\Calculation\Interfaces\obj\Debug\net6.0\Interfaces.AssemblyInfo.cs
+C:\Users\rakes\source\repos\Calculation\Interfaces\obj\Debug\net6.0\Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\rakes\source\repos\Calculation\Interfaces\obj\Debug\net6.0\Interfaces.csproj.CopyComplete
+C:\Users\rakes\source\repos\Calculation\Interfaces\obj\Debug\net6.0\Interfaces.dll
+C:\Users\rakes\source\repos\Calculation\Interfaces\obj\Debug\net6.0\refint\Interfaces.dll
+C:\Users\rakes\source\repos\Calculation\Interfaces\obj\Debug\net6.0\Interfaces.pdb
+C:\Users\rakes\source\repos\Calculation\Interfaces\obj\Debug\net6.0\ref\Interfaces.dll

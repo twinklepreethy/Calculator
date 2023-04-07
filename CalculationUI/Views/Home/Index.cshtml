@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Calculator</h1>
+    <h3>Calculate based on Functions</h3>
+    <br />
+    <h4>Enter 2 valid probabilities from 0 to 1</h4>@*TODO move to constant file*@
+    <div class="probability-container"> 
+    <div>
+        <label class="form-label col-1">P(A)</label>
+            <input class="col-7" type="number" data-bind="value: probabilityA, attr: { min: minValue, max: maxValue, step: step }" /> @*TODO move to constant file*@
+    </div>
+
+    <div>
+        <label class="form-label col-1">P(B)</label>
+            <input class="col-7" type="number" data-bind="value: probabilityB, attr: { min: minValue, max: maxValue, step: step }" />
+    </div>
+    </div>
+    <br />
+    <h4>Choose 1 from the following functions:</h4>
+    <div class="functions-list-container">
+        <div class="function-container">
+            <button class="btn-primary col-6" data-bind="click: onFunctionClick">CombinedWith: P(A)P(B)</button>
+            <span class="col-2 example-container">e.g. 0.5 * 0.5 = 0.25</span>
+        </div>
+
+        <div class="function-container">
+            <button class="btn-primary col-6" data-bind="click: onFunctionClick, css: { 'btn-secondary': isClicked, 'btn-primary': !isClicked() }">Either: P(A) + P(B) - P(A)P(B)</button>
+            <span class="col-2 example-container">e.g. 0.5 + 0.5 - 0.5 * 0.5 = 0.75</span>
+        </div>
+    </div>
+    <hr />
+
+    <h4>Your result from the selected function:</h4>
+    <span></span>
+</div>
+
+@section Scripts {
+    <script src="~/js/calculationviewmodel.js" asp-append-version="true"></script>
+
+    <script>
+        ko.applyBindings(new calculationViewModel(), document.getElementById('container'));
+    </script>
+}
+

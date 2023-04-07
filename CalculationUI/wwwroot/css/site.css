@@ -1,0 +1,37 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.probability-container {
+    padding-top: 20px;
+}
+
+.functions-list-container {
+    padding: 20px;
+}
+
+.function-container {
+    padding-bottom: 15px;
+}
+
+.example-container {
+    padding-left: 10px;
+    position: absolute;
+}
+
+.click
