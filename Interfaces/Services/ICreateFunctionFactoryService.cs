@@ -1,4 +1,5 @@
-﻿using CalculationUI.Models;
+﻿using Model.Core;
+using Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Interfaces.Services
 {
-    public interface IPerformCalculationService
+    public interface ICreateFunctionFactoryService
     {
-        decimal PerformCalculation(CalculationViewModel calculationViewModel);
+        Function CreateFunctionFactory(FunctionTypeEnum functionType);
     }
 }

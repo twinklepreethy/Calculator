@@ -1,4 +1,6 @@
-﻿using Model.DTOs;
+﻿using Model.Core;
+using Model.DTOs;
+using Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +12,7 @@ namespace Interfaces.Repositories
     public interface ICalculationRepository
     {
         IEnumerable<int> Get();
-        void Save(CalculationDto calculationDto);
+        void Add(string message);
+        Dictionary<FunctionTypeEnum, Func<Function>> GetFunctionFactories();
     }
 }

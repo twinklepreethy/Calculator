@@ -6,10 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.Entities
+namespace Model.Core
 {
+    [FunctionType(FunctionTypeEnum.CombinedWith)]
     public class CombinedWithFunction : Function
     {
+        public CombinedWithFunction()
+        {
+            FunctionType = FunctionTypeEnum.CombinedWith;
+        }
+
         public override decimal Calculate(decimal probabilityA, decimal probabilityB)
         {
             return probabilityA * probabilityB;
@@ -17,7 +23,7 @@ namespace Model.Entities
 
         public override string GetFormula()
         {
-            return FunctionConstants.CombinedWithFunction;
+            return FunctionFormulaConstants.CombinedWithFunction;
         }
     }
 }

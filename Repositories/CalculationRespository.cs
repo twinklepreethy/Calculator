@@ -1,6 +1,9 @@
 ﻿using Interfaces.Repositories;
+using Model.Core;
 using Model.DTOs;
 using Model.Entities;
+using Model.Enums;
+using System.Reflection;
 
 namespace Repositories
 {
@@ -8,19 +11,29 @@ namespace Repositories
     {
         public IEnumerable<int> Get()
         {
-            return new[] { 1, 2 };
+            return new List<int> { 1, 2 };
         }
 
-        public void Save(CalculationDto calculationDto)
+        public Dictionary<FunctionTypeEnum, Func<Function>> GetFunctionFactories()
         {
-            var result = new Calculation
+            var functionIds = Get();
+
+            var functionFactories = new Dictionary<FunctionTypeEnum, Func<Function>>();
+
+            foreach (var id in functionIds)
             {
-                Date = calculationDto.Date,
-                Function = calculationDto.Function,
-                ProbabilityA = calculationDto.ProbabilityA,
-                ProbabilityB = calculationDto.ProbabilityB,
-                Result = calculationDto.Result
-            };
+                var type = Assembly.GetExecutingAssembly().GetTypes().FirstOrDefault(t => t.IsSubclassOf(typeof(Function)) && t.GetCustomAttribute<FunctionTypeAttribute>()?.FunctionType == (FunctionTypeEnum)id);
+
+                var function = type != null ? Activator.CreateInstance(type) as Function : null;
+                functionFactories.Add((FunctionTypeEnum)id, () => function);
+            }
+            
+            return functionFactories;
+        }
+
+        public void Add(string message)
+        {
+            //string message = $"Date: {calculationDto.Date}";
         }
     }
 }

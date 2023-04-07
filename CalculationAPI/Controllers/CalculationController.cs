@@ -1,6 +1,7 @@
 using CalculationUI.Models;
 using Interfaces.Services;
 using Microsoft.AspNetCore.Mvc;
+using Model.Constants;
 
 namespace CalculationAPI.Controllers
 {
@@ -9,33 +10,33 @@ namespace CalculationAPI.Controllers
     public class CalculationController : ControllerBase
     {
         private readonly ILogger<CalculationController> _logger;
-        private readonly IGetFunctionsService _getFunctionsService;
-        //private readonly ICre
+        private readonly IGetCalculationVMService _getCalculationVMService;
+        private readonly IPerformCalculationService _performCalculationService;
 
-        public CalculationController(ILogger<CalculationController> logger, IGetFunctionsService getFunctionsService)
+        public CalculationController(ILogger<CalculationController> logger, IGetCalculationVMService getCalculationVMService, IPerformCalculationService performCalculationService)
         {
             _logger = logger;
-            _getFunctionsService = getFunctionsService;
+            _getCalculationVMService = getCalculationVMService;
+            _performCalculationService = performCalculationService;
         }
 
         [HttpGet]
-        public void Get()
+        public IActionResult Get()
         {
             try
             {
-
+                return Ok(_getCalculationVMService.GetCalculationVM());
             }
             catch (Exception)
             {
-
-                throw;
+                return BadRequest();
             }
         }
 
         [HttpPost]
-        public void SaveFunction(int functionId)
+        public void PerformCalculation(CalculationViewModel calculationViewModel)
         {
-
+            var result = _performCalculationService.PerformCalculation(calculationViewModel);
         }
     }
 }

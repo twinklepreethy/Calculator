@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.Entities
+namespace Model.Core
 {
     public class Function
     {
@@ -19,6 +19,6 @@ namespace Model.Entities
             return 0;
         }
 
-        public FunctionTypeEnum FunctionType { get; set; }
+        public virtual FunctionTypeEnum FunctionType { get; protected set; }
     }
 }
