@@ -5,14 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.Core
+namespace Factory
 {
     public class Function
     {
-        public virtual string GetFormula()
-        {
-            return string.Empty;
-        }
+        //TODO set it when reading from file and call it in the get formula func
+        public string Formula { get; set; }
 
         public virtual decimal Calculate(decimal probabilityA, decimal probabilityB)
         {

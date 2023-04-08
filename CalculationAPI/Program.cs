@@ -1,5 +1,7 @@
 using CalculationUI;
+using Interfaces.Repositories;
 using Interfaces.Services;
+using Repositories;
 using Services;
 
 namespace CalculationAPI
@@ -11,9 +13,14 @@ namespace CalculationAPI
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddCors();
 
             builder.Services.AddControllers();
-            builder.Services.AddSingleton<IGetFunctionsService, GetFunctionsService>();
+            builder.Services.AddSingleton<IGetCalculationVMService, GetCalculationVMService>();
+            builder.Services.AddSingleton<IPerformCalculationService, PerformCalculationService>();
+            builder.Services.AddSingleton<ICalculationRepository, CalculationRespository>();
+            builder.Services.AddSingleton<ILogService, LogService>();
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -31,6 +38,10 @@ namespace CalculationAPI
 
             app.UseAuthorization();
 
+            app.UseCors(builder => builder
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
 
             app.MapControllers();
 

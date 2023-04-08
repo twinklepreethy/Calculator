@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CalculationUI\CalculationUI.csproj" />
     <ProjectReference Include="..\Core\Model.csproj" />
+    <ProjectReference Include="..\Factory\Factory.csproj" />
     <ProjectReference Include="..\Interfaces\Interfaces.csproj" />
   </ItemGroup>
 

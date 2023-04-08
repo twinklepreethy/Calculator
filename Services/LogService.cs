@@ -1,7 +1,6 @@
 ﻿using CalculationUI.Models;
 using Interfaces.Repositories;
 using Interfaces.Services;
-using Model.Core;
 using Model.DTOs;
 using Model.Enums;
 using System;
@@ -16,15 +15,15 @@ namespace Services
     {
         private readonly ICalculationRepository _calculatorRepository;
 
-        public LogService(ICalculationRepository calculationRepository, ICreateFunctionFactoryService createFunctionFactoryService)
+        public LogService(ICalculationRepository calculationRepository)
         {
             _calculatorRepository = calculationRepository;
         }
 
-        public void Add(CalculationDto calculationDto)
+        public async Task Add(CalculationDto calculationDto)
         {
             var message = $"Date: { calculationDto.Date }";
-            _calculatorRepository.Add(message);
+            await _calculatorRepository.Add(message);
         }
     }
 }

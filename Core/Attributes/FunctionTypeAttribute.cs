@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.Core
+namespace Model.Attributes
 {
     public class FunctionTypeAttribute : Attribute
     {

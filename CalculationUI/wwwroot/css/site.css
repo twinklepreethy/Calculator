@@ -19,19 +19,18 @@ body {
 
 .probability-container {
     padding-top: 20px;
+    text-align: left;
 }
 
-.functions-list-container {
-    padding: 20px;
+.error-message {
+    color: orangered;
 }
 
-.function-container {
-    padding-bottom: 15px;
+.result-btn {
+    margin-top: 15px;
 }
 
-.example-container {
-    padding-left: 10px;
-    position: absolute;
+.result {
+    color: forestgreen;
+    text-align: left;
 }
-
-.click

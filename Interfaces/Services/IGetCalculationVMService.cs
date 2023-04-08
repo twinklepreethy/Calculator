@@ -9,6 +9,6 @@ namespace Interfaces.Services
 {
     public interface IGetCalculationVMService
     {
-        CalculationViewModel GetCalculationVM();
+        Task<CalculationViewModel> GetCalculationVM();
     }
 }

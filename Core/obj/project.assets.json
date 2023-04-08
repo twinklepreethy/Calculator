@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Calculator\\Core\\Model.csproj",
+      "projectUniqueName": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Core\\Model.csproj",
       "projectName": "Model",
-      "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Calculator\\Core\\Model.csproj",
+      "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Core\\Model.csproj",
       "packagesPath": "C:\\Users\\rakes\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Calculator\\Core\\obj\\",
+      "outputPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

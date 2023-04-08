@@ -9,6 +9,6 @@ namespace Interfaces.Services
 {
     public interface IPerformCalculationService
     {
-        decimal PerformCalculation(CalculationViewModel calculationViewModel);
+        Task<decimal> PerformCalculation(CalculationViewModel calculationViewModel);
     }
 }

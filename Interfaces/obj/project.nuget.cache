@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "O7gpvZwoQ03HcjF82+NMinHqA2q9bJFYgw5pNWUEyHOcZHxKmEOyg+ndvaE43VsBzvDQLuZYRHjOUhXRw0hCcQ==",
+  "dgSpecHash": "1Wu1TXGPUiM1UK7jEXODUEd2eZMa+WRJR69cD+DGEmCjcKRTUpVQVT3Gz/dzHAZR71tlZlR0pusR2IkUW4e90w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Calculator\\Interfaces\\Interfaces.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Interfaces\\Interfaces.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rakes\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\rakes\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
+    "C:\\Users\\rakes\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\rakes\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\rakes\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\rakes\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\rakes\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

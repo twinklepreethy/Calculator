@@ -1,5 +1,4 @@
 ﻿using CalculationUI.Models;
-using Model.Core;
 using Model.DTOs;
 using System;
 using System.Collections.Generic;
@@ -11,6 +10,6 @@ namespace Interfaces.Services
 {
     public interface ILogService
     {
-        void Add(CalculationDto calculationDto);
+        Task Add(CalculationDto calculationDto);
     }
 }

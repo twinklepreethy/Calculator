@@ -1,4 +1,4 @@
-﻿using Model.Core;
+﻿using Factory;
 using Model.DTOs;
 using Model.Enums;
 using System;
@@ -11,8 +11,8 @@ namespace Interfaces.Repositories
 {
     public interface ICalculationRepository
     {
-        IEnumerable<int> Get();
-        void Add(string message);
-        Dictionary<FunctionTypeEnum, Func<Function>> GetFunctionFactories();
+        Task<IEnumerable<int>> Get();
+        Task Add(string message);
+        Task<Dictionary<FunctionTypeEnum, Func<Function>>> GetFunctionFactories();
     }
 }

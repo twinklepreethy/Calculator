@@ -6,33 +6,41 @@
     <h1 class="display-4">Calculator</h1>
     <h3>Calculate based on Functions</h3>
     <br />
-    <h4>Enter 2 valid probabilities from 0 to 1</h4>@*TODO move to constant file*@
+    <h4>Enter 2 valid probabilities from <span data-bind="text: minValue"></span> to <span data-bind="text: maxValue"></span></h4>
     <div class="probability-container">
         <div>
-            <label class="form-label col-2">P(A)</label>
-            <input class="col-7" type="number" data-bind="value: probabilityA, attr: { min: minValue, max: maxValue, step: step }" /> @*TODO move to constant file*@
+            <label class="form-label offset-1 col-2">P(A)*</label>
+            <input class="col-6" type="number" data-bind="value: probabilityA, attr: { min: minValue, max: maxValue, step: step }" />
         </div>
 
         <div>
-            <label class="form-label col-2">P(B)</label>
-            <input class="col-7" type="number" data-bind="value: probabilityB, attr: { min: minValue, max: maxValue, step: step }" />
+            <label class="form-label offset-1 col-2">P(B)*</label>
+            <input class="col-6" type="number" data-bind="value: probabilityB, attr: { min: minValue, max: maxValue, step: step }" />
         </div>
 
         <div>
-            <label for="functionsList" class="form-label col-2">Select a function</label>
-            <select id="functionsList" class="col-7" data-bind="options: functions, optionsText: 'Text', optionsValue: 'Id', value: selectedFunctionId, optionsCaption: 'Please select...'"> </select>
+            <label for="functionsList" class="form-label offset-1 col-2">Select a function*</label>
+            <select id="functionsList" class="col-6" data-bind="options: functions, optionsText: 'text', optionsValue: 'id', value: selectedFunctionId, optionsCaption: 'Please select...'"> </select>
         </div>
-        
-        <!-- ko if: selectedFunctionId() -->
-        <div>
-            <span class="offset-2 col-7">e.g. 0.5 + 0.5 – 0.5*0.5 = 0.75</span>
-        </div>
+
+        <!-- ko if: showErrors() -->
+
+        <span class="offset-3 error-message" data-bind="text: errorMessage"></span>
+
         <!-- /ko -->
+
+        <div>
+            <button class="btn-primary result-btn offset-5" data-bind="click: viewResult">View Result</button>
+        </div>
     </div>
     <hr />
 
-    <h4>Your result from the selected function:</h4>
-    <span></span>
+    <!-- ko if: showResult() -->
+
+    <h4>Your result from the selected function ( <span data-bind="text: selectedFunction"></span> )</h4> 
+    <h3 class="offset-5 result" data-bind="text: result"></h3>
+
+    <!-- /ko -->
 </div>
 
 @section Scripts {

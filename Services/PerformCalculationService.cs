@@ -1,7 +1,7 @@
 ﻿using CalculationUI.Models;
+using Factory;
 using Interfaces.Repositories;
 using Interfaces.Services;
-using Model.Core;
 using Model.DTOs;
 using Model.Entities;
 using Model.Enums;
@@ -15,30 +15,29 @@ namespace Services
 {
     public class PerformCalculationService : IPerformCalculationService
     {
-        private readonly ICreateFunctionFactoryService _createFunctionFactoryService;
+       // private readonly ICreateFunctionFactoryService _createFunctionFactoryService;
         private readonly ILogService _logService;
 
-        public PerformCalculationService(ICreateFunctionFactoryService createFunctionFactoryService, ILogService logService)
+        public PerformCalculationService(ILogService logService)
         {
-            _createFunctionFactoryService = createFunctionFactoryService;
             _logService = logService;
 
         }
 
-        public decimal PerformCalculation(CalculationViewModel calculationVM)
+        public async Task<decimal> PerformCalculation(CalculationViewModel calculationVM)
         {
-            var functionFactory = _createFunctionFactoryService.CreateFunctionFactory((FunctionTypeEnum)calculationVM.SelectedFunctionId);
+            var functionFactory = FunctionFactory.CreateFunctionFactory((FunctionTypeEnum)calculationVM.SelectedFunctionId);
 
             if(functionFactory != null)
             {
                 var result = functionFactory.Calculate(calculationVM.ProbabilityA, calculationVM.ProbabilityB);
 
-                _logService.Add(new CalculationDto
+                await _logService.Add(new CalculationDto
                 {
                     Date = DateTime.Now,
                     ProbabilityA = calculationVM.ProbabilityA,
                     ProbabilityB = calculationVM.ProbabilityB,
-                    Function = functionFactory.GetFormula(),
+                    Function = functionFactory.Formula,
                     Result = result
                 });
 

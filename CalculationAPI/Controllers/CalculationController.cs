@@ -21,11 +21,11 @@ namespace CalculationAPI.Controllers
         }
 
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
             try
             {
-                return Ok(_getCalculationVMService.GetCalculationVM());
+                return Ok(await _getCalculationVMService.GetCalculationVM());
             }
             catch (Exception)
             {
@@ -34,9 +34,11 @@ namespace CalculationAPI.Controllers
         }
 
         [HttpPost]
-        public void PerformCalculation(CalculationViewModel calculationViewModel)
+        public async Task<decimal> PerformCalculation(CalculationViewModel calculationViewModel)
         {
-            var result = _performCalculationService.PerformCalculation(calculationViewModel);
+            var result = await _performCalculationService.PerformCalculation(calculationViewModel);
+
+            return result;
         }
     }
 }

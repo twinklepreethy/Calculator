@@ -19,22 +19,27 @@ namespace Services
             _calculationRepository = calculationRepository;
         }
 
-        public CalculationViewModel GetCalculationVM()
+        public async Task<CalculationViewModel> GetCalculationVM()
         {
             try
             {
-                var functionFactories = _calculationRepository.GetFunctionFactories();
+                var functionFactories = await _calculationRepository.GetFunctionFactories();
 
                 return new CalculationViewModel
                 {
                     Functions = functionFactories.Select(f => new KeyValueViewModel
                     {
                         Id = (int)f.Key,
-                        Text = f.Value().GetFormula()
+                        Text = f.Value().Formula
                     }),
                     Min = CalculationConstants.Min,
                     Max = CalculationConstants.Max,
-                    Step = CalculationConstants.Step
+                    Step = CalculationConstants.Step,
+                    ProbabilityAMaxValueErrorMsg = ErrorMessagesConstant.ProbabilityAMaxValueErrorMsg + CalculationConstants.Max,
+                    ProbabilityAMinValueErrorMsg = ErrorMessagesConstant.ProbabilityAMinValueErrorMsg + CalculationConstants.Min,
+                    ProbabilityBMaxValueErrorMsg = ErrorMessagesConstant.ProbabilityBMaxValueErrorMsg + CalculationConstants.Max,
+                    ProbabilityBMinValueErrorMsg = ErrorMessagesConstant.ProbabilityBMinValueErrorMsg + CalculationConstants.Min,
+                    EmptyFieldErrorMessage = ErrorMessagesConstant.EmptyFieldErrorMessage
                 };
             }
             catch (Exception ex)
