@@ -14,37 +14,33 @@ using System.Threading.Tasks;
 namespace Services
 {
     public class PerformCalculationService : IPerformCalculationService
-    {
-       // private readonly ICreateFunctionFactoryService _createFunctionFactoryService;
-        private readonly ILogService _logService;
+    {       
+        private readonly IFunctionFactoryWrapper _functionFactoryWrapper;
 
-        public PerformCalculationService(ILogService logService)
+        public PerformCalculationService(IFunctionFactoryWrapper functionFactoryWrapper)
         {
-            _logService = logService;
-
+            _functionFactoryWrapper = functionFactoryWrapper;
         }
 
-        public async Task<decimal> PerformCalculation(CalculationViewModel calculationVM)
+        public async Task<CalculationDto> PerformCalculation(CalculationViewModel calculationVM)
         {
-            var functionFactory = FunctionFactory.CreateFunctionFactory((FunctionTypeEnum)calculationVM.SelectedFunctionId);
+            var functionFactory = await _functionFactoryWrapper.CreateFunctionFactory((FunctionTypeEnum)calculationVM.SelectedFunctionId);
 
             if(functionFactory != null)
             {
                 var result = functionFactory.Calculate(calculationVM.ProbabilityA, calculationVM.ProbabilityB);
 
-                await _logService.Add(new CalculationDto
+                return new CalculationDto
                 {
                     Date = DateTime.Now,
                     ProbabilityA = calculationVM.ProbabilityA,
                     ProbabilityB = calculationVM.ProbabilityB,
                     Function = functionFactory.Formula,
                     Result = result
-                });
-
-                return result;
+                };
             }
 
-            return 0;
+            return null;
         }
     }
 }

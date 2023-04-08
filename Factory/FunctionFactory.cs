@@ -16,7 +16,7 @@ namespace Factory
         private static readonly IMemoryCache _cache = new MemoryCache(new MemoryCacheOptions());
         private static readonly object _cacheLock = new object();
 
-        public static Dictionary<FunctionTypeEnum, Func<Function>> GetFunctions(IEnumerable<int> functionIds = null)
+        public static Dictionary<FunctionTypeEnum, Func<Function>> GetFunctionFactories(IEnumerable<int> functionIds = null)
         {
             if(factoryDict == null)
             {

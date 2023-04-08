@@ -9,9 +9,11 @@ namespace Repositories
 {
     public class CalculationRespository : ICalculationRepository
     {
-        public CalculationRespository()
+        private readonly IFunctionFactoryWrapper _functionFactoryWrapper;
+
+        public CalculationRespository(IFunctionFactoryWrapper functionFactoryWrapper)
         {
-            
+            _functionFactoryWrapper = functionFactoryWrapper;
         }
 
         public async Task<IEnumerable<int>> Get()
@@ -23,7 +25,7 @@ namespace Repositories
         {
             var functionIds = await Get();
 
-            return FunctionFactory.GetFunctions(functionIds);
+            return await _functionFactoryWrapper.GetFunctionFactories();
         }
 
         public async Task Add(string message)

@@ -12,12 +12,14 @@ namespace CalculationAPI.Controllers
         private readonly ILogger<CalculationController> _logger;
         private readonly IGetCalculationVMService _getCalculationVMService;
         private readonly IPerformCalculationService _performCalculationService;
+        private readonly ILogService _logService;
 
-        public CalculationController(ILogger<CalculationController> logger, IGetCalculationVMService getCalculationVMService, IPerformCalculationService performCalculationService)
+        public CalculationController(ILogger<CalculationController> logger, IGetCalculationVMService getCalculationVMService, IPerformCalculationService performCalculationService, ILogService logService)
         {
             _logger = logger;
             _getCalculationVMService = getCalculationVMService;
             _performCalculationService = performCalculationService;
+            _logService = logService;
         }
 
         [HttpGet]
@@ -37,8 +39,8 @@ namespace CalculationAPI.Controllers
         public async Task<decimal> PerformCalculation(CalculationViewModel calculationViewModel)
         {
             var result = await _performCalculationService.PerformCalculation(calculationViewModel);
-
-            return result;
+            await _logService.Add(result);
+            return result.Result;
         }
     }
 }

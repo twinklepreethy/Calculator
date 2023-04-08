@@ -1,4 +1,5 @@
 ﻿using CalculationUI.Models;
+using Model.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace Interfaces.Services
 {
     public interface IPerformCalculationService
     {
-        Task<decimal> PerformCalculation(CalculationViewModel calculationViewModel);
+        Task<CalculationDto> PerformCalculation(CalculationViewModel calculationViewModel);
     }
 }
