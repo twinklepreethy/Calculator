@@ -3,6 +3,7 @@ using Model.Attributes;
 using Model.Enums;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -16,9 +17,9 @@ namespace Factory
         private static readonly IMemoryCache _cache = new MemoryCache(new MemoryCacheOptions());
         private static readonly object _cacheLock = new object();
 
-        public static Dictionary<FunctionTypeEnum, Func<Function>> GetFunctionFactories(IEnumerable<int> functionIds = null)
+        public static Dictionary<FunctionTypeEnum, Func<Function>> GetFunctionFactories()
         {
-            if(factoryDict == null)
+            try
             {
                 factoryDict = new Dictionary<FunctionTypeEnum, Func<Function>>();
 
@@ -28,12 +29,22 @@ namespace Factory
                 foreach (var enumValue in enums)
                 {
                     var type = types.FirstOrDefault(t => t.GetCustomAttribute<FunctionTypeAttribute>()?.FunctionType == (FunctionTypeEnum)enumValue);
-
                     var function = type != null ? Activator.CreateInstance(type) as Function : null;
+
+                    FieldInfo field = enumValue.GetType().GetField(enumValue.ToString());
+                    if (Attribute.GetCustomAttribute(field, typeof(DescriptionAttribute)) is DescriptionAttribute attribute)
+                    {
+                        function.Formula = attribute.Description;
+                    }
+
                     factoryDict.Add((FunctionTypeEnum)enumValue, () => function);
                 }
 
                 _cache.Set("factoryDict", factoryDict);
+            }
+            catch (Exception)
+            {
+                throw new Exception("Error building function factories");
             }
 
             return factoryDict;

@@ -13,5 +13,6 @@ namespace Model.Constants
         public const string ProbabilityBMinValueErrorMsg = "P(B) is less than the minimum value: ";
         public const string ProbabilityBMaxValueErrorMsg = "P(B) is greater than the maximum value: ";
         public const string EmptyFieldErrorMessage = "Field(s) marked with * is mandatory";
+        public const string InvalidFunctionSelectedErrorMsg = "Function selected is invalid";
     }
 }

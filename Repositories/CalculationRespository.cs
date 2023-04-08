@@ -16,15 +16,8 @@ namespace Repositories
             _functionFactoryWrapper = functionFactoryWrapper;
         }
 
-        public async Task<IEnumerable<int>> Get()
-        {
-            return new List<int> { 1, 2 };
-        }
-
         public async Task<Dictionary<FunctionTypeEnum, Func<Function>>> GetFunctionFactories()
         {
-            var functionIds = await Get();
-
             return await _functionFactoryWrapper.GetFunctionFactories();
         }
 

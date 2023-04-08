@@ -11,12 +11,7 @@ namespace Factory
 {
     [FunctionType(FunctionTypeEnum.Either)]
     public class EitherFunction : Function
-    { 
-        public EitherFunction() 
-        {
-            Formula = FunctionFormulaConstants.EitherFunction;
-        }
-        
+    {         
         public override decimal Calculate(decimal probabilityA, decimal probabilityB)
         {
             return probabilityA + probabilityB - probabilityA * probabilityB;

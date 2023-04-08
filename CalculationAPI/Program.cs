@@ -19,6 +19,7 @@ namespace CalculationAPI
             builder.Services.AddControllers();
             builder.Services.AddSingleton<IGetCalculationVMService, GetCalculationVMService>();
             builder.Services.AddSingleton<IPerformCalculationService, PerformCalculationService>();
+            builder.Services.AddSingleton<IValidationService, ValidationService>();
             builder.Services.AddSingleton<ILogService, LogService>();
             builder.Services.AddSingleton<ICalculationRepository, CalculationRespository>();
             builder.Services.AddSingleton<IFunctionFactoryWrapper, FunctionFactoryWrapper>();

@@ -11,7 +11,6 @@ namespace Interfaces.Repositories
 {
     public interface ICalculationRepository
     {
-        Task<IEnumerable<int>> Get();
         Task Add(string message);
         Task<Dictionary<FunctionTypeEnum, Func<Function>>> GetFunctionFactories();
     }
