@@ -40,10 +40,10 @@ C:\Users\rakes\OneDrive\Documents\Preethy\Calculator\Services\obj\Debug\net6.0\S
 C:\Users\rakes\OneDrive\Documents\Preethy\Calculator\Services\obj\Debug\net6.0\refint\Services.dll
 C:\Users\rakes\OneDrive\Documents\Preethy\Calculator\Services\obj\Debug\net6.0\Services.pdb
 C:\Users\rakes\OneDrive\Documents\Preethy\Calculator\Services\obj\Debug\net6.0\ref\Services.dll
-C:\Users\rakes\OneDrive\Documents\Preethy\Services\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\rakes\OneDrive\Documents\Preethy\Services\bin\Debug\net6.0\appsettings.json
 C:\Users\rakes\OneDrive\Documents\Preethy\Services\bin\Debug\net6.0\CalculationUI.deps.json
 C:\Users\rakes\OneDrive\Documents\Preethy\Services\bin\Debug\net6.0\CalculationUI.runtimeconfig.json
+C:\Users\rakes\OneDrive\Documents\Preethy\Services\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\rakes\OneDrive\Documents\Preethy\Services\bin\Debug\net6.0\appsettings.json
 C:\Users\rakes\OneDrive\Documents\Preethy\Services\bin\Debug\net6.0\CalculationUI.staticwebassets.runtime.json
 C:\Users\rakes\OneDrive\Documents\Preethy\Services\bin\Debug\net6.0\CalculationUI.exe
 C:\Users\rakes\OneDrive\Documents\Preethy\Services\bin\Debug\net6.0\Services.deps.json

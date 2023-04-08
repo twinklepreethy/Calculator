@@ -10,7 +10,7 @@ namespace Factory
     public class Function
     {
         //TODO set it when reading from file and call it in the get formula func
-        public string Formula { get; set; }
+        public string Formula { get; protected set; } = string.Empty;
 
         public virtual decimal Calculate(decimal probabilityA, decimal probabilityB)
         {

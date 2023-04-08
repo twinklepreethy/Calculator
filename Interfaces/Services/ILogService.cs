@@ -11,5 +11,6 @@ namespace Interfaces.Services
     public interface ILogService
     {
         Task Add(CalculationDto calculationDto);
+        Task LogError(string message);
     }
 }

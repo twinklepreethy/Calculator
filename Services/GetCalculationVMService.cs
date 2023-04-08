@@ -13,10 +13,12 @@ namespace Services
     public class GetCalculationVMService : IGetCalculationVMService
     {
         private readonly ICalculationRepository _calculationRepository;
+        private readonly ILogService _logService;
 
-        public GetCalculationVMService(ICalculationRepository calculationRepository)
+        public GetCalculationVMService(ICalculationRepository calculationRepository, ILogService logService)
         {
             _calculationRepository = calculationRepository;
+            _logService = logService;
         }
 
         public async Task<CalculationViewModel> GetCalculationVM()
@@ -44,7 +46,7 @@ namespace Services
             }
             catch (Exception ex)
             {
-
+                await _logService.LogError("Something gone wrong with building Function Factories - " + ex.Message);
                 throw;
             }
         }

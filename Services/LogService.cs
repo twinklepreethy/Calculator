@@ -22,8 +22,25 @@ namespace Services
 
         public async Task Add(CalculationDto calculationDto)
         {
-            var message = $"Date: { calculationDto.Date }";
+            try
+            {
+                var message = $"Date: { calculationDto.Date },\n" +
+                              $"Caculation Type: { calculationDto.Function },\n" +
+                              $"Inputs: P(A): { calculationDto.ProbabilityA } and " +
+                              $"P(B): { calculationDto.ProbabilityB },\n" +
+                              $"Result: { calculationDto.Result }";
+
             await _calculatorRepository.Add(message);
+            }
+            catch (Exception ex)
+            {
+                await LogError("Error logging calculation");
+            }
+        }
+
+        public async Task LogError(string message)
+        {
+            await _calculatorRepository.Add($"Error: " + message);
         }
     }
 }

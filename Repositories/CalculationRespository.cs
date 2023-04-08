@@ -30,7 +30,26 @@ namespace Repositories
 
         public async Task Add(string message)
         {
-            //string message = $"Date: {calculationDto.Date}";
+            try
+            {
+                DateTime now = DateTime.Now;
+
+                string directory = @"C:\Logs";
+                if (!Directory.Exists(directory))
+                {
+                    Directory.CreateDirectory(directory);
+                }
+
+                string fileName = Path.Combine(directory, $"log_{now.ToString("yyyy-MM-dd_HH-mm")}.txt");
+                using (StreamWriter writer = new StreamWriter(fileName))
+                {
+                    writer.WriteLine(message);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
         }
     }
 }

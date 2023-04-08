@@ -9,14 +9,12 @@ namespace CalculationAPI.Controllers
     [Route("[controller]")]
     public class CalculationController : ControllerBase
     {
-        private readonly ILogger<CalculationController> _logger;
         private readonly IGetCalculationVMService _getCalculationVMService;
         private readonly IPerformCalculationService _performCalculationService;
         private readonly ILogService _logService;
 
-        public CalculationController(ILogger<CalculationController> logger, IGetCalculationVMService getCalculationVMService, IPerformCalculationService performCalculationService, ILogService logService)
+        public CalculationController(IGetCalculationVMService getCalculationVMService, IPerformCalculationService performCalculationService, ILogService logService)
         {
-            _logger = logger;
             _getCalculationVMService = getCalculationVMService;
             _performCalculationService = performCalculationService;
             _logService = logService;
@@ -29,8 +27,9 @@ namespace CalculationAPI.Controllers
             {
                 return Ok(await _getCalculationVMService.GetCalculationVM());
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                await _logService.LogError("Error building Calculation ViewModel - " + ex.Message);
                 return BadRequest();
             }
         }
@@ -38,9 +37,18 @@ namespace CalculationAPI.Controllers
         [HttpPost]
         public async Task<decimal> PerformCalculation(CalculationViewModel calculationViewModel)
         {
-            var result = await _performCalculationService.PerformCalculation(calculationViewModel);
-            await _logService.Add(result);
-            return result.Result;
+            try
+            {
+                var result = await _performCalculationService.PerformCalculation(calculationViewModel);
+                await _logService.Add(result);
+                return result.Result;
+            }
+            catch (Exception ex)
+            {
+                await _logService.LogError("Error performing calculation - " + ex.Message);
+                throw;
+            }
+
         }
     }
 }

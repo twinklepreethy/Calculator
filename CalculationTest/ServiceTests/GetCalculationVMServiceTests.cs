@@ -18,12 +18,14 @@ namespace CalculationTest.ServiceTests
         private readonly Fixture _fixture = new Fixture();
         private readonly IGetCalculationVMService _sut;
         private readonly Mock<ICalculationRepository> _mockCalculationRepo;
+        private readonly Mock<ILogService> _mockLogService;
 
         public GetCalculationVMServiceTests()
         {
             _mockCalculationRepo = new Mock<ICalculationRepository>();
+            _mockLogService = new Mock<ILogService>();
 
-            _sut = new GetCalculationVMService(_mockCalculationRepo.Object);
+            _sut = new GetCalculationVMService(_mockCalculationRepo.Object, _mockLogService.Object);
         }
 
         [Fact]

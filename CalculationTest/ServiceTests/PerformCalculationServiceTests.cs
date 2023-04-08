@@ -18,12 +18,14 @@ namespace CalculationTest.ServiceTests
     {
         private readonly IPerformCalculationService _sut;
         private readonly Mock<IFunctionFactoryWrapper> _mockFunctionFactoryWrapper;
+        private readonly Mock<ILogService> _mockLogService;
         private readonly Fixture _fixture = new Fixture();
 
         public PerformCalculationServiceTests()
         {
             _mockFunctionFactoryWrapper = new Mock<IFunctionFactoryWrapper>();
-            _sut = new PerformCalculationService(_mockFunctionFactoryWrapper.Object);
+            _mockLogService = new Mock<ILogService>();
+            _sut = new PerformCalculationService(_mockFunctionFactoryWrapper.Object, _mockLogService.Object);
         }
 
         [Fact]

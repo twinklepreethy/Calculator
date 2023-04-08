@@ -16,10 +16,12 @@ namespace Services
     public class PerformCalculationService : IPerformCalculationService
     {       
         private readonly IFunctionFactoryWrapper _functionFactoryWrapper;
+        private readonly ILogService _logService;
 
-        public PerformCalculationService(IFunctionFactoryWrapper functionFactoryWrapper)
+        public PerformCalculationService(IFunctionFactoryWrapper functionFactoryWrapper, ILogService logService)
         {
             _functionFactoryWrapper = functionFactoryWrapper;
+            _logService = logService;
         }
 
         public async Task<CalculationDto> PerformCalculation(CalculationViewModel calculationVM)
@@ -27,7 +29,7 @@ namespace Services
             var functionFactory = await _functionFactoryWrapper.CreateFunctionFactory((FunctionTypeEnum)calculationVM.SelectedFunctionId);
 
             if(functionFactory != null)
-            {
+            {                
                 var result = functionFactory.Calculate(calculationVM.ProbabilityA, calculationVM.ProbabilityB);
 
                 return new CalculationDto
@@ -39,6 +41,8 @@ namespace Services
                     Result = result
                 };
             }
+
+            await _logService.LogError("Cannot build function factory");
 
             return null;
         }

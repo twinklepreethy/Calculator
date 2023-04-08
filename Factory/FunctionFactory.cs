@@ -43,17 +43,18 @@ namespace Factory
         {
             lock (_cacheLock)
             {
-                if (_cache.TryGetValue("factoryDict", out factoryDict))
+                if(!_cache.TryGetValue("factoryDict", out factoryDict))
                 {
-                    if (!factoryDict.TryGetValue(functionType, out var factory))
-                    {
-                        throw new ArgumentException("Invalid function type");
-                    }
-
-                    return factory();
+                    factoryDict = GetFunctionFactories();
+                    _cache.Set("factoryDict", factoryDict);
                 }
 
-                throw new ArgumentException("No data available");
+                if (!factoryDict.TryGetValue(functionType, out var factory))
+                {
+                    throw new ArgumentException("Invalid function type");
+                }
+
+                return factory();
             }
         }
     }
