@@ -33,7 +33,8 @@ namespace Repositories
                     Directory.CreateDirectory(directory);
                 }
 
-                string fileName = Path.Combine(directory, $"log_{now.ToString("yyyy-MM-dd_HH-mm")}.txt");
+                string fileName = Path.Combine(directory, $"log_{now.ToString("yyyy-MM-dd_HH-mm-ss")}.txt");
+
                 using (StreamWriter writer = new StreamWriter(fileName))
                 {
                     writer.WriteLine(message);
