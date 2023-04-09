@@ -2,6 +2,7 @@
 using Factory;
 using Interfaces.Repositories;
 using Interfaces.Services;
+using Model.Constants;
 using Model.DTOs;
 using Model.Entities;
 using Model.Enums;
@@ -38,7 +39,7 @@ namespace Services
                     ProbabilityA = calculationVM.ProbabilityA,
                     ProbabilityB = calculationVM.ProbabilityB,
                     Function = functionFactory.Formula,
-                    Result = result
+                    Result = Math.Round(result, CalculationConstants.DecimalPrecision)
                 };
             }
 

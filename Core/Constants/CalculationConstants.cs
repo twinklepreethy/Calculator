@@ -12,5 +12,6 @@ namespace Model.Constants
         public const decimal Max = 1;
         public const decimal Step = 0.01m;
         public const int EmptyFunction = 0;
+        public const int DecimalPrecision = 4;
     }
 }

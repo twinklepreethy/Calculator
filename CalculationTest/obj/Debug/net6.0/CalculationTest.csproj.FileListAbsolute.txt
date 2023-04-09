@@ -344,3 +344,5 @@ C:\Users\rakes\OneDrive\Documents\Preethy\CalculationTest\obj\Debug\net6.0\refin
 C:\Users\rakes\OneDrive\Documents\Preethy\CalculationTest\obj\Debug\net6.0\CalculationTest.pdb
 C:\Users\rakes\OneDrive\Documents\Preethy\CalculationTest\obj\Debug\net6.0\CalculationTest.genruntimeconfig.cache
 C:\Users\rakes\OneDrive\Documents\Preethy\CalculationTest\obj\Debug\net6.0\ref\CalculationTest.dll
+C:\Users\rakes\OneDrive\Documents\Preethy\CalculationTest\bin\Debug\net6.0\Repositories.dll
+C:\Users\rakes\OneDrive\Documents\Preethy\CalculationTest\bin\Debug\net6.0\Repositories.pdb
