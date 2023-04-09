@@ -28,7 +28,7 @@ For extending further calculation functions, a child class have to be added to t
     }
 ```
 
-![Function Class for Extension](https://github.com/twinklepreethy/Calculator)
+![Function Class for Extension](https://github.com/twinklepreethy/Calculator/blob/main/Class%20Diagram.png)
 
 
 
