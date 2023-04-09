@@ -42,7 +42,7 @@ namespace Repositories
             }
             catch (Exception ex)
             {
-                throw;
+                throw new Exception("Error: Data cannot be logged" + ex.Message);
             }
         }
     }
