@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 
 namespace CalculationTest.RepositoryTests
 {
-
     public class CalculationRespositoryTests
     {
         private readonly Mock<IFunctionFactoryWrapper> _mockFunctionFactoryWrapper;
@@ -66,5 +65,4 @@ namespace CalculationTest.RepositoryTests
             await Assert.ThrowsAsync<Exception>(() => _sut.Add(message, path));
         }
     }
-
 }
