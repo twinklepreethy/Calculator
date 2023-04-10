@@ -26,6 +26,10 @@ body {
     color: orangered;
 }
 
+.warning-message {
+    color: darkgoldenrod;
+}
+
 .result-btn {
     margin-top: 15px;
 }

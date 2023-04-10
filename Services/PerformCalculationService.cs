@@ -6,6 +6,7 @@ using Model.Constants;
 using Model.DTOs;
 using Model.Entities;
 using Model.Enums;
+using Model.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,25 +28,34 @@ namespace Services
 
         public async Task<CalculationDto> PerformCalculation(CalculationViewModel calculationVM)
         {
-            var functionFactory = await _functionFactoryWrapper.CreateFunctionFactory((FunctionTypeEnum)calculationVM.SelectedFunctionId);
+            try
+            {
+                var functionFactory = await _functionFactoryWrapper.CreateFunctionFactory((FunctionTypeEnum)calculationVM.SelectedFunctionId);
 
-            if(functionFactory != null)
-            {                
-                var result = functionFactory.Calculate(calculationVM.ProbabilityA, calculationVM.ProbabilityB);
-
-                return new CalculationDto
+                if (functionFactory != null)
                 {
-                    Date = DateTime.Now,
-                    ProbabilityA = calculationVM.ProbabilityA,
-                    ProbabilityB = calculationVM.ProbabilityB,
-                    Function = functionFactory.Formula,
-                    Result = Math.Round(result, CalculationConstants.DecimalPrecision)
-                };
+                    var result = functionFactory.Calculate(calculationVM.ProbabilityA, calculationVM.ProbabilityB);
+
+                    return new CalculationDto
+                    {
+                        Date = DateTime.Now,
+                        ProbabilityA = calculationVM.ProbabilityA,
+                        ProbabilityB = calculationVM.ProbabilityB,
+                        Function = functionFactory.Formula,
+                        Result = result.RoundTo4Places()
+                    };
+                }
+
+                await _logService.LogError("Cannot build function factory");
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                await _logService.LogError("Cannot perform calculation" + ex.Message);
+                throw;
             }
 
-            await _logService.LogError("Cannot build function factory");
-
-            return null;
         }
     }
 }

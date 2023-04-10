@@ -32,7 +32,7 @@ namespace CalculationAPI.Controllers
             catch (Exception ex)
             {
                 await _logService.LogError("Error building Calculation ViewModel - " + ex.Message);
-                return BadRequest();
+                return BadRequest(ex.Message);
             }
         }
 
@@ -54,7 +54,7 @@ namespace CalculationAPI.Controllers
             catch (Exception ex)
             {
                 await _logService.LogError("Error performing calculation - " + ex.Message);
-                return BadRequest();
+                return BadRequest(ex.Message);
             }
 
         }

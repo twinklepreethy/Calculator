@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lULvBfx4xgxlcQNlwmMbIGHW/uAoqMO1YvjgbLBLGhTH0uxzv7NSfiXj+sGvu7uruVCfe+zVVr7GgH5N0IfBWA==",
+  "dgSpecHash": "numT+cEaItDwaZeriYiWBf/proFQE54YmD4ytv/1VD6P33SddztdWet/qAVJDZPJVlG0eJYwNwxbFdWCz2KapA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Core\\Model.csproj",
+  "projectFilePath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Core\\Model.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

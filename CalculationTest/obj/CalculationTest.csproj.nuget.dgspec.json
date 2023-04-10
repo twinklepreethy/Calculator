@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\CalculationTest\\CalculationTest.csproj": {}
+    "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\CalculationTest\\CalculationTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\CalculationTest\\CalculationTest.csproj": {
+    "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\CalculationTest\\CalculationTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\CalculationTest\\CalculationTest.csproj",
+        "projectUniqueName": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\CalculationTest\\CalculationTest.csproj",
         "projectName": "CalculationTest",
-        "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\CalculationTest\\CalculationTest.csproj",
+        "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\CalculationTest\\CalculationTest.csproj",
         "packagesPath": "C:\\Users\\rakes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\CalculationTest\\obj\\",
+        "outputPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\CalculationTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Services\\Services.csproj": {
-                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Services\\Services.csproj"
+              "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Services\\Services.csproj": {
+                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Services\\Services.csproj"
               }
             }
           }
@@ -98,14 +98,14 @@
         }
       }
     },
-    "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\CalculationUI\\CalculationUI.csproj": {
+    "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\CalculationUI\\CalculationUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\CalculationUI\\CalculationUI.csproj",
+        "projectUniqueName": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\CalculationUI\\CalculationUI.csproj",
         "projectName": "CalculationUI",
-        "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\CalculationUI\\CalculationUI.csproj",
+        "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\CalculationUI\\CalculationUI.csproj",
         "packagesPath": "C:\\Users\\rakes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\CalculationUI\\obj\\",
+        "outputPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\CalculationUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -161,14 +161,14 @@
         }
       }
     },
-    "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Core\\Model.csproj": {
+    "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Core\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Core\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Core\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Core\\Model.csproj",
+        "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Core\\Model.csproj",
         "packagesPath": "C:\\Users\\rakes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Core\\obj\\",
+        "outputPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -221,14 +221,14 @@
         }
       }
     },
-    "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Factory\\Factory.csproj": {
+    "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Factory\\Factory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Factory\\Factory.csproj",
+        "projectUniqueName": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Factory\\Factory.csproj",
         "projectName": "Factory",
-        "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Factory\\Factory.csproj",
+        "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Factory\\Factory.csproj",
         "packagesPath": "C:\\Users\\rakes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Factory\\obj\\",
+        "outputPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Factory\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -250,8 +250,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Core\\Model.csproj": {
-                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Core\\Model.csproj"
+              "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Core\\Model.csproj": {
+                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Core\\Model.csproj"
               }
             }
           }
@@ -291,14 +291,14 @@
         }
       }
     },
-    "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Interfaces\\Interfaces.csproj": {
+    "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Interfaces\\Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Interfaces\\Interfaces.csproj",
+        "projectUniqueName": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Interfaces\\Interfaces.csproj",
         "projectName": "Interfaces",
-        "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Interfaces\\Interfaces.csproj",
+        "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Interfaces\\Interfaces.csproj",
         "packagesPath": "C:\\Users\\rakes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Interfaces\\obj\\",
+        "outputPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -320,14 +320,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\CalculationUI\\CalculationUI.csproj": {
-                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\CalculationUI\\CalculationUI.csproj"
+              "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\CalculationUI\\CalculationUI.csproj": {
+                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\CalculationUI\\CalculationUI.csproj"
               },
-              "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Core\\Model.csproj": {
-                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Core\\Model.csproj"
+              "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Core\\Model.csproj": {
+                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Core\\Model.csproj"
               },
-              "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Factory\\Factory.csproj": {
-                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Factory\\Factory.csproj"
+              "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Factory\\Factory.csproj": {
+                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Factory\\Factory.csproj"
               }
             }
           }
@@ -361,14 +361,14 @@
         }
       }
     },
-    "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Services\\Services.csproj": {
+    "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Services\\Services.csproj",
+        "projectUniqueName": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Services\\Services.csproj",
+        "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\rakes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Services\\obj\\",
+        "outputPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -390,17 +390,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\CalculationUI\\CalculationUI.csproj": {
-                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\CalculationUI\\CalculationUI.csproj"
+              "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\CalculationUI\\CalculationUI.csproj": {
+                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\CalculationUI\\CalculationUI.csproj"
               },
-              "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Core\\Model.csproj": {
-                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Core\\Model.csproj"
+              "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Core\\Model.csproj": {
+                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Core\\Model.csproj"
               },
-              "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Factory\\Factory.csproj": {
-                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Factory\\Factory.csproj"
+              "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Factory\\Factory.csproj": {
+                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Factory\\Factory.csproj"
               },
-              "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Interfaces\\Interfaces.csproj": {
-                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Interfaces\\Interfaces.csproj"
+              "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Interfaces\\Interfaces.csproj"
               }
             }
           }

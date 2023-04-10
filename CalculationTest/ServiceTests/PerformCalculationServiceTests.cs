@@ -109,5 +109,69 @@ namespace CalculationTest.ServiceTests
             // Act & Assert
             await Assert.ThrowsAsync<Exception>(() => _sut.PerformCalculation(calculationVM));
         }
+
+        [Fact]
+        public async Task PerformCalculation_DecimalMaxValue_ThrowsOverflowException()
+        {
+            // Arrange
+            var calculationVM = _fixture.Build<CalculationViewModel>()
+                                        .With(x => x.ProbabilityA, decimal.MaxValue)
+                                        .With(x => x.ProbabilityB, 10)
+                                        .With(x => x.SelectedFunctionId, (int)FunctionTypeEnum.CombinedWith)
+                                        .Create();
+
+            var function = _fixture.Build<CombinedWithFunction>().Create();
+
+            _mockFunctionFactoryWrapper.Setup(f => f.CreateFunctionFactory(FunctionTypeEnum.CombinedWith))
+                .ReturnsAsync(function);
+
+            // Act & Assert
+            await Assert.ThrowsAsync<OverflowException>(() => _sut.PerformCalculation(calculationVM));
+        }
+
+        [Fact]
+        public async Task PerformCalculation_DecimalMinValue_ThrowsOverflowException()
+        {
+            // Arrange
+            var calculationVM = _fixture.Build<CalculationViewModel>()
+                                        .With(x => x.ProbabilityA, decimal.MinValue)
+                                        .With(x => x.ProbabilityB, 10)
+                                        .With(x => x.SelectedFunctionId, (int)FunctionTypeEnum.CombinedWith)
+                                        .Create();
+
+            var function = _fixture.Build<CombinedWithFunction>().Create();
+
+            _mockFunctionFactoryWrapper.Setup(f => f.CreateFunctionFactory(FunctionTypeEnum.CombinedWith))
+                .ReturnsAsync(function);
+
+            // Act & Assert
+            await Assert.ThrowsAsync<OverflowException>(() => _sut.PerformCalculation(calculationVM));
+        }
+
+        [Fact]
+        public async Task PerformCalculation_PrecisionGreaterThan28_HappyPath()
+        {
+            // Arrange
+            var calculationVM = _fixture.Build<CalculationViewModel>()
+                                        .With(x => x.ProbabilityA, 0.4444444444444444444444444444555m)
+                                        .With(x => x.ProbabilityB, 1)
+                                        .With(x => x.SelectedFunctionId, (int)FunctionTypeEnum.CombinedWith)
+                                        .Create();
+
+            var function = _fixture.Build<CombinedWithFunction>().Create();
+
+            _mockFunctionFactoryWrapper.Setup(f => f.CreateFunctionFactory(FunctionTypeEnum.CombinedWith))
+                .ReturnsAsync(function);
+
+            // Act
+            var result = await _sut.PerformCalculation(calculationVM);
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.Equal(0.4444m, result.Result);
+            Assert.Equal(calculationVM.ProbabilityA, result.ProbabilityA);
+            Assert.Equal(calculationVM.ProbabilityB, result.ProbabilityB);
+            Assert.Equal(function.Formula, result.Function);
+        }
     }
 }

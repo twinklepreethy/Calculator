@@ -13,12 +13,15 @@
     self.selectedFunction = ko.observable('');
     self.showErrors = ko.observable(false);
     self.errorMessage = ko.observable('');
+    self.warningMessage = ko.observable('');
     self.result = ko.observable('');
     self.probabilityAMaxValueErrorMsg = ko.observable('');
     self.probabilityAMinValueErrorMsg = ko.observable('');
     self.probabilityBMaxValueErrorMsg = ko.observable('');
     self.probabilityBMinValueErrorMsg = ko.observable('');
     self.emptyFieldErrorMessage = ko.observable('');
+    self.decimalPrecisionWarning = ko.observable('');
+    self.resultError = ko.observable('');
 
     $.ajax({
         url: getApiBaseURL() + '/Calculation/',
@@ -34,19 +37,25 @@
             self.probabilityBMaxValueErrorMsg(result.probabilityBMaxValueErrorMsg);
             self.probabilityBMinValueErrorMsg(result.probabilityBMinValueErrorMsg);
             self.emptyFieldErrorMessage(result.emptyFieldErrorMessage);
+            self.decimalPrecisionWarning(result.decimalPrecisionWarning);
+        },
+        error: function (error) {
+            self.showErrors(true);
+            self.errorMessage(error.responseText);
         }
     });
 
     $("input").keyup(function () {
-        self.showErrors(false);
+        self.clearErrorAndWarnings();
     });
 
     $("select").click(function () {
-        self.showErrors(false);
+        self.clearErrorAndWarnings();
     });
 
     self.viewResult = function () {
-        self.showResult(false);
+        self.clearErrorAndWarnings();
+
         if (self.validate()) {
 
             var selectedFunctionText = $("select option:selected").text();
@@ -67,6 +76,9 @@
                 success: function (result) {
                     self.result(result);
                     self.showResult(true);
+                },
+                error: function (error) {
+                    self.resultError(error.responseText);
                 }
             });
         }
@@ -102,7 +114,20 @@
             return false;
         }
 
+        var precisionALength = self.probabilityA().includes('.') ? self.probabilityA().split('.')[1].length : 0;
+        var precisionBLength = self.probabilityB().includes('.') ? self.probabilityB().split('.')[1].length : 0;
+        if (precisionALength > 28 || precisionBLength > 28) {
+            self.warningMessage(self.decimalPrecisionWarning());
+            return true;
+        }
+
         return true;
+    };
+
+    self.clearErrorAndWarnings = function () {
+        self.showErrors(false);
+        self.warningMessage('');
+        self.resultError('');
     };
 }
 

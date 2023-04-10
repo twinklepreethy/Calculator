@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7y1ukYQMh49h+496jIHUHlFlslQBeqpM7qOmByXhPod/uShthmLR6XVpElU7glcIz6V0cFcSYRVN45xFYsstVA==",
+  "dgSpecHash": "jUYDKSU0+Atczr+kSX71LDiHbgaaaRJdbnRwbGFtbw15AK0anV+IpCIDKb/ftGsf+63Jz/Y3pqPMeLMPPpSZzw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Repositories\\Repositories.csproj",
+  "projectFilePath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Repositories\\Repositories.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rakes\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\rakes\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",

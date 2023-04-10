@@ -34,3 +34,15 @@ C:\Users\rakes\OneDrive\Documents\Preethy\Core\obj\Debug\net6.0\Model.dll
 C:\Users\rakes\OneDrive\Documents\Preethy\Core\obj\Debug\net6.0\refint\Model.dll
 C:\Users\rakes\OneDrive\Documents\Preethy\Core\obj\Debug\net6.0\Model.pdb
 C:\Users\rakes\OneDrive\Documents\Preethy\Core\obj\Debug\net6.0\ref\Model.dll
+C:\Users\rakes\OneDrive\Documents\Calculator\Core\bin\Debug\net6.0\Model.deps.json
+C:\Users\rakes\OneDrive\Documents\Calculator\Core\bin\Debug\net6.0\Model.dll
+C:\Users\rakes\OneDrive\Documents\Calculator\Core\bin\Debug\net6.0\Model.pdb
+C:\Users\rakes\OneDrive\Documents\Calculator\Core\obj\Debug\net6.0\Model.csproj.AssemblyReference.cache
+C:\Users\rakes\OneDrive\Documents\Calculator\Core\obj\Debug\net6.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rakes\OneDrive\Documents\Calculator\Core\obj\Debug\net6.0\Model.AssemblyInfoInputs.cache
+C:\Users\rakes\OneDrive\Documents\Calculator\Core\obj\Debug\net6.0\Model.AssemblyInfo.cs
+C:\Users\rakes\OneDrive\Documents\Calculator\Core\obj\Debug\net6.0\Model.csproj.CoreCompileInputs.cache
+C:\Users\rakes\OneDrive\Documents\Calculator\Core\obj\Debug\net6.0\Model.dll
+C:\Users\rakes\OneDrive\Documents\Calculator\Core\obj\Debug\net6.0\refint\Model.dll
+C:\Users\rakes\OneDrive\Documents\Calculator\Core\obj\Debug\net6.0\Model.pdb
+C:\Users\rakes\OneDrive\Documents\Calculator\Core\obj\Debug\net6.0\ref\Model.dll

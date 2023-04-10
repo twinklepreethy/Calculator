@@ -14,5 +14,6 @@
         public string ProbabilityBMinValueErrorMsg { get; set; } = string.Empty;
         public string ProbabilityBMaxValueErrorMsg { get; set; } = string.Empty;
         public string EmptyFieldErrorMessage { get; set; } = string.Empty;
+        public string DecimalPrecisionWarning { get; set; } = string.Empty;
     }
 }

@@ -397,11 +397,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Factory\\Factory.csproj",
+      "projectUniqueName": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Factory\\Factory.csproj",
       "projectName": "Factory",
-      "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Factory\\Factory.csproj",
+      "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Factory\\Factory.csproj",
       "packagesPath": "C:\\Users\\rakes\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Factory\\obj\\",
+      "outputPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Factory\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -423,8 +423,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Core\\Model.csproj": {
-              "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Preethy\\Core\\Model.csproj"
+            "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Core\\Model.csproj": {
+              "projectPath": "C:\\Users\\rakes\\OneDrive\\Documents\\Calculator\\Core\\Model.csproj"
             }
           }
         }

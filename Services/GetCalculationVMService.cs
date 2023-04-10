@@ -41,7 +41,8 @@ namespace Services
                     ProbabilityAMinValueErrorMsg = ErrorMessagesConstant.ProbabilityAMinValueErrorMsg + CalculationConstants.Min,
                     ProbabilityBMaxValueErrorMsg = ErrorMessagesConstant.ProbabilityBMaxValueErrorMsg + CalculationConstants.Max,
                     ProbabilityBMinValueErrorMsg = ErrorMessagesConstant.ProbabilityBMinValueErrorMsg + CalculationConstants.Min,
-                    EmptyFieldErrorMessage = ErrorMessagesConstant.EmptyFieldErrorMessage
+                    EmptyFieldErrorMessage = ErrorMessagesConstant.EmptyFieldErrorMessage,
+                    DecimalPrecisionWarning = ErrorMessagesConstant.DecimalPrecisionWarning
                 };
             }
             catch (Exception ex)

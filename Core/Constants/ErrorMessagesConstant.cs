@@ -14,5 +14,6 @@ namespace Model.Constants
         public const string ProbabilityBMaxValueErrorMsg = "P(B) is greater than the maximum value: ";
         public const string EmptyFieldErrorMessage = "Field(s) marked with * is mandatory";
         public const string InvalidFunctionSelectedErrorMsg = "Function selected is invalid";
+        public const string DecimalPrecisionWarning = "Warning: Only 28 digit precision used for calculation. Result might not be accurate!";
     }
 }

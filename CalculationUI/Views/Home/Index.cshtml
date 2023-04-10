@@ -29,6 +29,12 @@
 
         <!-- /ko -->
 
+        <!-- ko if: warningMessage() -->
+
+        <span class="offset-3 warning-message" data-bind="text: warningMessage"></span>
+
+        <!-- /ko -->
+
         <div>
             <button class="btn-primary result-btn offset-5" data-bind="click: viewResult">View Result</button>
         </div>
@@ -39,6 +45,11 @@
 
     <h4>Your result from the selected function ( <span data-bind="text: selectedFunction"></span> )</h4> 
     <h3 class="offset-5 result" data-bind="text: result"></h3>
+
+    <!-- /ko -->
+    <!-- ko if: resultError() -->
+
+    <span class="error-message" data-bind="text: resultError"></span>
 
     <!-- /ko -->
 </div>
