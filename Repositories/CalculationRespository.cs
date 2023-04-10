@@ -21,19 +21,18 @@ namespace Repositories
             return await _functionFactoryWrapper.GetFunctionFactories();
         }
 
-        public async Task Add(string message)
+        public async Task Add(string message, string path)
         {
             try
             {
                 DateTime now = DateTime.Now;
 
-                string directory = @"C:\Logs";
-                if (!Directory.Exists(directory))
+                if (!Directory.Exists(path))
                 {
-                    Directory.CreateDirectory(directory);
+                    Directory.CreateDirectory(path);
                 }
 
-                string fileName = Path.Combine(directory, $"log_{now.ToString("yyyy-MM-dd_HH-mm-ss")}.txt");
+                string fileName = Path.Combine(path, $"log_{now.ToString("yyyy-MM-dd_HH-mm-ss")}.txt");
 
                 using (StreamWriter writer = new StreamWriter(fileName))
                 {

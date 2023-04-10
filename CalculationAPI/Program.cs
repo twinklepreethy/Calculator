@@ -23,6 +23,7 @@ namespace CalculationAPI
             builder.Services.AddSingleton<ILogService, LogService>();
             builder.Services.AddSingleton<ICalculationRepository, CalculationRespository>();
             builder.Services.AddSingleton<IFunctionFactoryWrapper, FunctionFactoryWrapper>();
+            builder.Services.AddSingleton<IConfigurationService, ConfigurationService>();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

@@ -472,3 +472,5 @@ C:\Users\rakes\OneDrive\Documents\Calculator\CalculationTest\obj\Debug\net6.0\re
 C:\Users\rakes\OneDrive\Documents\Calculator\CalculationTest\obj\Debug\net6.0\CalculationTest.pdb
 C:\Users\rakes\OneDrive\Documents\Calculator\CalculationTest\obj\Debug\net6.0\CalculationTest.genruntimeconfig.cache
 C:\Users\rakes\OneDrive\Documents\Calculator\CalculationTest\obj\Debug\net6.0\ref\CalculationTest.dll
+C:\Users\rakes\OneDrive\Documents\Calculator\CalculationTest\bin\Debug\net6.0\Repositories.dll
+C:\Users\rakes\OneDrive\Documents\Calculator\CalculationTest\bin\Debug\net6.0\Repositories.pdb
