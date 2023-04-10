@@ -14,7 +14,7 @@ When View Result button is clicked, the Calculated Result will be displayed for 
 ## Developer Notes
 -----------------------------------------
 
-For extending further calculation functions, a child class of ***Function.cs*** has to be created . Since db is not used, new calculation functions have to be added to the enum ***FunctionTypeEnum***.
+For extending further calculation functions, a child class of ***Function.cs*** has to be created . Since db is not used, new calculation functions have to be added to the enum ***FunctionTypeEnum***. The new child class has to be mapped to the right FunctionTypeEnum via it's FunctionType Attribute.
 
 
 ```c#
